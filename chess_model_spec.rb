@@ -79,7 +79,7 @@ describe "Board" do
     end
   end
 
-    describe "kk_move(king)" do
+  describe "kk_move(king)" do
     it "should return an array of moves for the king passed" do
       chess_board.place(king, [1,1])
       expect(chess_board.check_kk_move(king)).to eq [[2,1], [2,2], [1,2],[0,2],[0,1],[0,0],[1,0],[2,0]]
