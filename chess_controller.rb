@@ -59,7 +59,3 @@ while !game.check_mate? do
 end
 
 puts "Check mate!!!"
-
-
-
-

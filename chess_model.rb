@@ -119,6 +119,7 @@ class Board
     @board[position[0]][position[1]] = piece
     piece.position = position
   end
+
   def capture_piece?(position)
     @board[position[0]][position[1]] != nil ? true : false
   end
@@ -192,7 +193,6 @@ class Board
     valid_moves
   end
 
-
   def check_pawn_move(piece)
     valid_moves = []
     temp_row = piece.position[0] + piece.moves[0][0]
@@ -252,9 +252,3 @@ class Board
     piece_picture += "\s" + "\s" + %w[a b c d e f g h].join(' ')
   end
 end
-
-# b = Board.new
-# knight = Knight.new({color: "black", position: [7,1]})
-# b.place(knight, knight.position)
-# puts b.to_s
-# p b.check_kk_move(knight)
